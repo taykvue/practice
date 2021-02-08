@@ -1,0 +1,127 @@
+/* this is where all of your CSS styles go */
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+.grid_container {
+	width: 700px;
+	height: 300px;
+	position: relative;
+	left: 60%;
+	top: 50%; 
+	margin-top: -200px;
+	margin-left: -300px;
+}
+
+.letter {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 7em;
+	float: left;
+	margin-left: 10px;
+}
+
+/* Animation Keyframes */
+
+.m {
+    opacity: 0;
+}
+
+
+@keyframes p_move {
+    0% {opacity: 0; left: -200px; color: blue;}
+    25% {opacity: 1; left: -200px;}
+    50% {opacity: 1; left: 0px;}
+    100% {opacity: 1; left: -100px; color: black;}
+}
+
+.p {
+    opacity: 0;
+    position: relative;
+    animation: p_move 3s ease;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+}
+
+@keyframes u_move {
+    0% {opacity: 0; left: 0px; color: blue;}
+    75% {left: 0px;}
+    100% {opacity: 1; left: -100px; color: black;}
+}
+
+.u {
+    opacity: 0;
+    position: relative;
+    animation: u_move 3s forwards ease-in;
+}
+
+@keyframes r_move {
+    0% {opacity: 0; left: 0px; color: blue;}
+    80% {left: 0px;}
+    100% {opacity: 1; left: -100px; color: black;}
+}
+
+.r {
+    opacity: 0;
+    position: relative;
+    animation: r_move 2.5s forwards ease-in;
+    animation-delay: .7s;
+}
+
+@keyframes e_move {
+    0% {opacity: 0; left: 0px; color: blue;}
+    80% {left: 0px;}
+    90% {opacity: 1;}
+    100% {opacity: 0; left: -100px; color: black;}
+}
+.e {
+    opacity: 0;
+    position: relative;
+    animation: e_move 2.5s forwards ease-in;
+    animation-delay: .8s;
+}
+
+@keyframes ify_move {
+    0% {opacity: 0; left: 0px;}
+    50% {opacity: 0; left: 0px; color: blue;}
+    100% {opacity: 1; left: -180px; color: black;}
+}
+.i {
+    opacity: 0;
+    position: relative;
+    animation: ify_move 6.2s forwards ease;
+}
+
+.f {
+    opacity: 0;
+    position: relative;
+    animation: ify_move 6s forwards ease;
+}
+
+.y {
+    opacity: 0;
+    position: relative;
+    animation: ify_move 6s forwards ease;
+}
+
+@keyframes square_move {
+    0%      {width: 100px; top: -50px; height: 220px; opacity: 1; left: -500px;border-radius: 0%}
+    25%     {width: 300px; top: -50px; height: 120px; opacity: 1; left: 900px;border-radius: 2%}
+    90%     {width: 300px; top: -50px; height: 220px; opacity: 1; left: 420px;border-radius: 4%}
+    100%     {width: 100px; top: -20px; height: 100px; opacity: 1; left: 700px;border-radius: 100%}
+}
+
+.square {
+    width: 200px;
+	height: 200px;
+    position: absolute;
+    background: blue;
+	left: 20%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: -1;
+	opacity: 0;
+	animation: square_move 6s forwards cubic-bezier(1,0,0,1);
+}
